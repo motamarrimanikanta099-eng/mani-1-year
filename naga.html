@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Video Editor UI Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Navigation Header */
+        header {
+            height: 48px;
+            background-color: #18181b;
+            border-bottom: 1px solid #27272a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 16px;
+            color: #00f2fe;
+        }
+
+        .btn-export {
+            background-color: #00f2fe;
+            color: #000;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Main Workspace Grid */
+        .workspace {
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Left Panel - Assets */
+        .asset-panel {
+            background-color: #18181b;
+            border-right: 1px solid #27272a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .asset-tabs {
+            display: flex;
+            border-bottom: 1px solid #27272a;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            color: #a1a1aa;
+        }
+
+        .tab.active {
+            color: #fff;
+            border-bottom: 2px solid #00f2fe;
+        }
+
+        .asset-grid {
+            padding: 12px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .asset-card {
+            aspect-ratio: 16/9;
+            background-color: #27272a;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        /* Center - Viewport */
+        .viewport-panel {
+            background-color: #09090b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .video-player {
+            width: 640px;
+            height: 360px;
+            background-color: #000;
+            border: 1px solid #27272a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #52525b;
+        }
+
+        /* Right Panel - Properties */
+        .properties-panel {
+            background-color: #18181b;
+            border-left: 1px solid #27272a;
+            padding: 16px;
+        }
+
+        .property-group {
+            margin-bottom: 20px;
+        }
+
+        .property-group h4 {
+            font-size: 12px;
+            color: #a1a1aa;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        /* Bottom - Timeline Area */
+        .timeline-panel {
+            height: 220px;
+            background-color: #18181b;
+            border-top: 1px solid #27272a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-controls {
+            height: 36px;
+            border-bottom: 1px solid #27272a;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        .timeline-tracks {
+            flex: 1;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+        }
+
+        .track {
+            height: 40px;
+            background-color: #27272a;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .clip {
+            position: absolute;
+            left: 50px;
+            width: 180px;
+            height: 100%;
+            background-color: #00f2fe;
+            border-radius: 4px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VideoEditor Web</div>
+        <button class="btn-export">Export</button>
+    </header>
+
+    <div class="workspace">
+        <div class="asset-panel">
+            <div class="asset-tabs">
+                <div class="tab active">Media</div>
+                <div class="tab">Audio</div>
+                <div class="tab">Text</div>
+                <div class="tab">Effects</div>
+            </div>
+            <div class="asset-grid">
+                <div class="asset-card">Clip 1</div>
+                <div class="asset-card">Clip 2</div>
+                <div class="asset-card">Clip 3</div>
+                <div class="asset-card">Clip 4</div>
+            </div>
+        </div>
+
+        <div class="viewport-panel">
+            <div class="video-player">
+                <span>Video Preview Screen</span>
+            </div>
+        </div>
+
+        <div class="properties-panel">
+            <div class="property-group">
+                <h4>Transform</h4>
+                <p style="font-size: 13px; color: #71717a;">Scale: 100%</p>
+                <p style="font-size: 13px; color: #71717a;">Position: X:0 Y:0</p>
+            </div>
+            <div class="property-group">
+                <h4>Audio</h4>
+                <p style="font-size: 13px; color: #71717a;">Volume: 0 dB</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-panel">
+        <div class="timeline-controls">
+            <span>▶ Play</span>
+            <span>00:00:00 / 00

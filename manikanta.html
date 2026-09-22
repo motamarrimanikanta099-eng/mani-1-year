@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor UI</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: 50px 1fr 180px;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+        }
+
+        .sidebar {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-right: 1px solid #333;
+        }
+
+        .preview-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #050505;
+        }
+
+        .video-box {
+            width: 60%;
+            height: 70%;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #444;
+        }
+
+        .timeline {
+            background-color: #181818;
+            border-top: 1px solid #333;
+            padding: 15px;
+        }
+
+        .track {
+            height: 40px;
+            background-color: #2a2a2a;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Video Editor UI</h2>
+    </header>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Tools</h3>
+            <ul>
+                <li>Media</li>
+                <li>Audio</li>
+                <li>Text</li>
+                <li>Effects</li>
+            </ul>
+        </div>
+        <div class="preview-area">
+            <div class="video-box">
+                <p>Video Preview Area</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <h3>Timeline</h3>
+        <div class="track"></div>
+        <div class="track"></div>
+    </div>
+
+</body>
+</html>
