@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamHomes - Real Estate</title>
+    <link rel="stylesheet" href="mani1.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1>🏡 DreamHomes</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#compare">Compare</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Find Your Dream Property</h2>
+        <p>Discover houses, apartments and rental properties.</p>
+        <a href="#properties" class="btn">Explore Properties</a>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <h2>Search Properties</h2>
+
+        <form class="search-box" action="#properties">
+            <input type="search" placeholder="Enter location..." aria-label="Location">
+
+            <select aria-label="Property type">
+                <option value="">Property Type</option>
+                <option>House</option>
+                <option>Apartment</option>
+                <option>Rental</option>
+            </select>
+
+            <select aria-label="Budget">
+                <option value="">Select Budget</option>
+                <option>Below ₹50 Lakhs</option>
+                <option>₹50 Lakhs - ₹1 Crore</option>
+                <option>Above ₹1 Crore</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+        <p class="note">Demo search interface — filtering requires JavaScript.</p>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties">
+        <h2>Featured Properties</h2>
+
+        <div class="property-container">
+
+            <div class="property-card">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury modern house">
+
+                <div class="property-info">
+                    <span class="tag">For Sale</span>
+                    <h3>Luxury Family House</h3>
+                    <p>📍 Vijayawada, Andhra Pradesh</p>
+                    <h2>₹85 Lakhs</h2>
+                    <p>🛏 3 Bedrooms | 🚿 3 Bathrooms</p>
+                    <p>📐 2,000 sq.ft.</p>
+                    <p class="amenities">Garden • Parking • Balcony</p>
+                    <a href="#contact" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Modern apartment interior">
+
+                <div class="property-info">
+                    <span class="tag">For Sale</span>
+                    <h3>Modern City Apartment</h3>
+                    <p>📍 Guntur, Andhra Pradesh</p>
+                    <h2>₹55 Lakhs</h2>
+                    <p>🛏 2 Bedrooms | 🚿 2 Bathrooms</p>
+                    <p>📐 1,200 sq.ft.</p>
+                    <p class="amenities">Gym • Lift • Security</p>
+                    <a href="#contact" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Contemporary rental house">
+
+                <div class="property-info">
+                    <span class="tag rent">For Rent</span>
+                    <h3>Comfortable Rental Home</h3>
+                    <p>📍 Benz Circle, Vijayawada</p>
+                    <h2>₹18,000/month</h2>
+                    <p>🛏 2 Bedrooms | 🚿 2 Bathrooms</p>
+                    <p>📐 1,100 sq.ft.</p>
+                    <p class="amenities">Parking • Kitchen • Balcony</p>
+                    <a href="#contact" class="btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Property Comparison Table -->
+    <section id="compare" class="compare-section">
+        <h2>Compare Properties</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Bedrooms</th>
+                        <th>Area</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Luxury Family House</td>
+                        <td>Vijayawada</td>
+                        <td>₹85 Lakhs</td>
+                        <td>3</td>
+                        <td>2,000 sq.ft.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Modern City Apartment</td>
+                        <td>Guntur</td>
+                        <td>₹55 Lakhs</td>
+                        <td>2</td>
+                        <td>1,200 sq.ft.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Comfortable Rental Home</td>
+                        <td>Benz Circle</td>
+                        <td>₹18,000/month</td>
+                        <td>2</td>
+                        <td>1,100 sq.ft.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Looking for your dream home? Contact our property team.</p>
+
+        <form action="mailto:homes@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell us about your property requirements" required></textarea>
+            <button type="submit">Send Enquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>🏡 DreamHomes</h3>
+        <p>Your trusted property discovery platform.</p>
+        <p>© 2026 DreamHomes. Demo website.</p>
+    </footer>
+
+</body>
+</html>

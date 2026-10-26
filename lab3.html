@@ -1,11 +1,465 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>web page</title>
-        <link rel="stylesheet" href="lab3.css">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1 style="color: blue;">MY LEARNING PORTFOLIO</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spice Garden | Restaurant</title>
+    <link rel="JavaScript" href="lab3.js">
+    <link rel="stylesheet" href="lab3.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <span>🍽</span>
+            <h1>Spice Garden</h1>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#special">Special</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">WELCOME TO SPICE GARDEN</p>
+
+                <h2>Authentic Taste<br>Beautiful Memories</h2>
+
+                <p>
+                    Enjoy delicious Indian cuisine prepared with
+                    fresh ingredients and traditional spices.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn">Explore Menu</a>
+                    <a href="#reservation" class="btn outline">
+                        Book a Table
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+
+            <div class="about-image"></div>
+
+            <article class="about-content">
+
+                <p class="section-title">OUR STORY</p>
+
+                <h2>A Taste You'll Never Forget</h2>
+
+                <p>
+                    Welcome to Spice Garden, a place where traditional
+                    Indian flavors meet modern dining.
+                </p>
+
+                <p>
+                    Our chefs prepare every dish using fresh vegetables,
+                    aromatic spices and authentic cooking techniques.
+                </p>
+
+                <div class="features">
+
+                    <div>
+                        <span>🌿</span>
+                        <h3>Fresh Food</h3>
+                        <p>Fresh ingredients every day.</p>
+                    </div>
+
+                    <div>
+                        <span>👨‍🍳</span>
+                        <h3>Expert Chefs</h3>
+                        <p>Prepared by skilled chefs.</p>
+                    </div>
+
+                    <div>
+                        <span>❤️</span>
+                        <h3>Made With Love</h3>
+                        <p>Every dish is made with care.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+
+            <div class="section-heading">
+
+                <p class="section-title">OUR MENU</p>
+
+                <h2>Popular Dishes</h2>
+
+                <p>
+                    Discover our most loved dishes.
+                </p>
+
+            </div>
+
+
+            <!-- Menu Filter -->
+            <div class="filters">
+
+                <button class="filter active" data-category="all">
+                    All
+                </button>
+
+                <button class="filter" data-category="starter">
+                    Starters
+                </button>
+
+                <button class="filter" data-category="main">
+                    Main Course
+                </button>
+
+                <button class="filter" data-category="dessert">
+                    Desserts
+                </button>
+
+            </div>
+
+
+            <!-- Food Cards -->
+            <div class="food-grid">
+
+                <article class="food-card" data-category="starter">
+
+                    <div class="food-image food1"></div>
+
+                    <div class="food-info">
+
+                        <h3>Paneer Tikka</h3>
+
+                        <p>
+                            Grilled paneer with vegetables and
+                            aromatic Indian spices.
+                        </p>
+
+                        <div class="price">
+                            <span>₹199</span>
+                            <button onclick="addToCart('Paneer Tikka')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-category="main">
+
+                    <div class="food-image food2"></div>
+
+                    <div class="food-info">
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p>
+                            Fragrant basmati rice cooked with
+                            tender chicken and spices.
+                        </p>
+
+                        <div class="price">
+                            <span>₹249</span>
+                            <button onclick="addToCart('Chicken Biryani')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-category="main">
+
+                    <div class="food-image food3"></div>
+
+                    <div class="food-info">
+
+                        <h3>Masala Dosa</h3>
+
+                        <p>
+                            Crispy South Indian dosa with
+                            delicious potato masala.
+                        </p>
+
+                        <div class="price">
+                            <span>₹129</span>
+                            <button onclick="addToCart('Masala Dosa')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-category="starter">
+
+                    <div class="food-image food4"></div>
+
+                    <div class="food-info">
+
+                        <h3>Veg Manchurian</h3>
+
+                        <p>
+                            Crispy vegetable balls tossed in
+                            delicious Manchurian sauce.
+                        </p>
+
+                        <div class="price">
+                            <span>₹179</span>
+                            <button onclick="addToCart('Veg Manchurian')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-category="dessert">
+
+                    <div class="food-image food5"></div>
+
+                    <div class="food-info">
+
+                        <h3>Gulab Jamun</h3>
+
+                        <p>
+                            Soft sweet dumplings served with
+                            delicious sugar syrup.
+                        </p>
+
+                        <div class="price">
+                            <span>₹99</span>
+                            <button onclick="addToCart('Gulab Jamun')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-category="dessert">
+
+                    <div class="food-image food6"></div>
+
+                    <div class="food-info">
+
+                        <h3>Ice Cream</h3>
+
+                        <p>
+                            Creamy and refreshing ice cream
+                            with delicious toppings.
+                        </p>
+
+                        <div class="price">
+                            <span>₹129</span>
+                            <button onclick="addToCart('Ice Cream')">
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Special Section -->
+        <section id="special" class="special">
+
+            <div class="special-content">
+
+                <p class="section-title">TODAY'S SPECIAL</p>
+
+                <h2>Andhra Special Thali</h2>
+
+                <p>
+                    Experience the authentic flavors of Andhra Pradesh
+                    with rice, dal, curries, vegetables, chutneys,
+                    pickle, papad and dessert.
+                </p>
+
+                <h3>Only ₹299</h3>
+
+                <a href="#reservation" class="btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reservation -->
+        <section id="reservation" class="reservation">
+
+            <div class="section-heading">
+
+                <p class="section-title">RESERVATION</p>
+
+                <h2>Book Your Table</h2>
+
+                <p>
+                    Reserve your table and enjoy a wonderful meal.
+                </p>
+
+            </div>
+
+
+            <form id="reservationForm">
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                    <input
+                        type="time"
+                        id="time"
+                        required
+                    >
+
+                </div>
+
+
+                <select id="guests" required>
+
+                    <option value="">
+                        Number of Guests
+                    </option>
+
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+
+                </select>
+
+
+                <button type="submit" class="btn">
+                    Confirm Reservation
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+
+            <div>
+
+                <p class="section-title">CONTACT US</p>
+
+                <h2>Visit Spice Garden</h2>
+
+                <p>📍 Vijayawada, Andhra Pradesh</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>✉️ info@spicegarden.com</p>
+
+            </div>
+
+            <aside class="opening">
+
+                <h3>Opening Hours</h3>
+
+                <p>Monday - Friday</p>
+                <strong>11:00 AM - 10:30 PM</strong>
+
+                <p>Saturday - Sunday</p>
+                <strong>11:00 AM - 11:00 PM</strong>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>🍽 Spice Garden</h3>
+
+        <p>
+            Authentic Taste • Fresh Ingredients • Happy Moments
+        </p>
+
+        <p>
+            © 2026 Spice Garden Restaurant
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 </html>

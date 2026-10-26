@@ -1,3 +1,389 @@
-.a{
-    background-color: ;
+/* ---------- BASIC SETTINGS ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+    background: #fffaf3;
+    line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #ffd166;
+}
+
+.logo p {
+    font-size: 13px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.welcome,
+.subtitle {
+    color: #d97706;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero .welcome {
+    color: #ffd166;
+}
+
+.hero h2 {
+    font-size: clamp(55px, 8vw, 100px);
+    font-family: Georgia, serif;
+    margin: 10px 0;
+}
+
+.hero p:not(.welcome) {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background: #d97706;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b45309;
+    transform: translateY(-3px);
+}
+
+/* ---------- COMMON SECTIONS ---------- */
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #3f2618;
+    margin: 10px 0 20px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+.info-box {
+    padding: 35px;
+    background: #3f2618;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.info-box h3 {
+    color: #ffd166;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.info-box strong {
+    color: #fff;
+}
+
+/* ---------- MENU ---------- */
+
+.menu {
+    text-align: center;
+    background: #f8eee2;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ---------- FOOD IMAGES ---------- */
+
+.food-image {
+    height: 220px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.biryani {
+    background-image:
+        url("https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=800&q=80");
+}
+
+.paneer {
+    background-image:
+        url("https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80");
+}
+
+.dosa {
+    background-image:
+        url("https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80");
+}
+
+.dessert {
+    background-image:
+        url("https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80");
+}
+
+/* ---------- FOOD CONTENT ---------- */
+
+.food-content {
+    padding: 22px;
+}
+
+.food-content h3 {
+    color: #3f2618;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.food-content p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.food-content strong {
+    color: #d97706;
+    font-size: 20px;
+}
+
+/* ---------- SPECIAL ---------- */
+
+.special {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.special h2 {
+    color: white;
+}
+
+.special div {
+    max-width: 650px;
+}
+
+.special p:not(.subtitle) {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    text-align: center;
+}
+
+.contact address {
+    font-style: normal;
+    font-size: 18px;
+}
+
+.contact address p {
+    margin: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    background: #24150e;
+    color: white;
+}
+
+footer p:first-child {
+    color: #ffd166;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 900px) {
+
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 15px;
+        background: #3f2618;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h2 {
+        font-size: 50px;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .food-image {
+        height: 240px;
+    }
 }

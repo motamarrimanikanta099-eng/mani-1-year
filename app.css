@@ -1,0 +1,199 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    color: orange;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.hero {
+    background: linear-gradient(#0008, #0008),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: orange;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: orangered;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 25px;
+    color: #e65c00;
+}
+
+#offers {
+    background-color: #ffe6cc;
+}
+
+#offers p {
+    margin: 10px;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.food-card {
+    background-color: white;
+    width: 250px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #0002;
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 15px 5px 8px;
+}
+
+.food-card p {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.food-card h4 {
+    color: #e65c00;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc4400;
+}
+
+#reviews {
+    background-color: #fff0df;
+}
+
+.review {
+    background-color: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px #0001;
+}
+
+.review p {
+    margin: 8px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 25px 10px;
+}
+
+footer h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 8px;
+    }
+
+    nav a {
+        margin: 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .food-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
